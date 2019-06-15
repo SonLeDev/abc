@@ -1,0 +1,34 @@
+<div class="container alert alert-info">
+  <h1>Login</h1>
+  <form (ngSubmit)="onSubmit()" [formGroup]="signInForm">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        formControlName="username"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        required
+        formControlName="password"
+      />
+    </div>
+    <div>
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="!loginForm.form.valid"
+      >
+        Submit
+      </button>
+      <a routerLink="/signup" routerLinkActive="active">Signup</a>
+    </div>
+  </form>
+</div>

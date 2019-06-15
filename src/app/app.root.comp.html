@@ -1,0 +1,15 @@
+<menutop-nav *ngIf="isLogin"></menutop-nav>
+<div>
+  ab
+  <auth-state> </auth-state>
+</div>
+<div class="wrapper">
+  <!-- Sidebar  -->
+  <sidebar-nav *ngIf="isLogin"> </sidebar-nav>
+  <!-- Page Content  -->
+  <div id="content">
+    <div id="app.root.comp">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
